@@ -157,26 +157,6 @@ def print_summary(df: pd.DataFrame) -> None:
     print("=" * 60)
 
 
-def filter_low_score_cases(
-    df: pd.DataFrame, threshold: float = FAITHFULNESS_THRESHOLD
-) -> pd.DataFrame:
-    """
-    筛选低分样本
-
-    Args:
-        df: 报告 DataFrame
-        threshold: 分数阈值
-
-    Returns:
-        低分样本 DataFrame
-    """
-    if "faithfulness" not in df.columns:
-        return pd.DataFrame()
-
-    faith = pd.to_numeric(df["faithfulness"], errors="coerce")
-    return df[faith < threshold]
-
-
 def export_summary_statistics(df: pd.DataFrame, output_file: str) -> None:
     """
     导出统计摘要到文件

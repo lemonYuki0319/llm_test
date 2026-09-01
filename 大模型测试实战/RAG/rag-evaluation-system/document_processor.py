@@ -12,7 +12,6 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from config import (
     DEFAULT_CHUNK_SIZE,
     DEFAULT_CHUNK_OVERLAP,
-    get_testdate_dir,
     get_testcases_dir,
 )
 

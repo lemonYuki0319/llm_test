@@ -48,8 +48,6 @@ DEFAULT_MULTI_HOP_COUNT = int(os.getenv("MULTI_HOP_COUNT", "3"))
 # =============================================================================
 # 评分阈值
 FAITHFULNESS_THRESHOLD = float(os.getenv("FAITHFULNESS_THRESHOLD", "0.8"))
-RELEVANCY_THRESHOLD = float(os.getenv("RELEVANCY_THRESHOLD", "0.7"))
-CONTEXT_RECALL_THRESHOLD = float(os.getenv("CONTEXT_RECALL_THRESHOLD", "0.7"))
 
 # RAGAS 运行配置
 EVAL_TIMEOUT = int(os.getenv("EVAL_TIMEOUT", "180"))
@@ -112,13 +110,6 @@ TESTDATE_DIR = os.getenv("TESTDATE_DIR", "testdate")
 def get_project_root() -> str:
     """获取项目根目录"""
     return os.path.dirname(os.path.abspath(__file__))
-
-
-def get_output_dir() -> str:
-    """获取输出目录（不存在则创建）"""
-    output_dir = os.path.join(get_project_root(), OUTPUT_DIR)
-    os.makedirs(output_dir, exist_ok=True)
-    return output_dir
 
 
 def get_testcases_dir() -> str:
