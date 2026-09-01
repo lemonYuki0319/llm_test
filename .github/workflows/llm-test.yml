@@ -1,0 +1,38 @@
+name: LLM Test Pipeline
+
+on:
+  push:
+    paths:
+      - 'code/config/**'
+      - 'code/testdata/**'
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * 1'
+
+jobs:
+  llm-regression-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r code/requirements.txt
+      - name: Run functional tests
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: cd code && pytest testcases/test_functional.py -v --tb=short
+      - name: Run security tests
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: cd code && pytest testcases/test_security.py -v --tb=short
+      - name: Run quality evaluation
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: cd code && pytest testcases/test_quality.py -v --tb=short
+      - name: Check quality threshold
+        run: cd code && python scripts/check_quality_threshold.py
