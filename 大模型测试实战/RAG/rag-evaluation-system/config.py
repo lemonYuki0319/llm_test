@@ -114,13 +114,6 @@ def get_project_root() -> str:
     return os.path.dirname(os.path.abspath(__file__))
 
 
-def get_output_dir() -> str:
-    """获取输出目录（不存在则创建）"""
-    output_dir = os.path.join(get_project_root(), OUTPUT_DIR)
-    os.makedirs(output_dir, exist_ok=True)
-    return output_dir
-
-
 def get_testcases_dir() -> str:
     """获取测试用例目录（不存在则创建）"""
     testcases_dir = os.path.join(get_project_root(), TESTCASES_DIR)
