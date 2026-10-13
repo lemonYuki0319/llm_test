@@ -10,12 +10,10 @@
 """
 import argparse
 import os
-import sys
 
 from config import (
     get_testdate_dir,
     get_testcases_dir,
-    get_output_dir,
     DEFAULT_CHUNK_SIZE,
     DEFAULT_CHUNK_OVERLAP,
     DEFAULT_QA_PER_CHUNK,
@@ -128,7 +126,6 @@ def migrate_testset(testset_file: str | None = None):
     Args:
         testset_file: 测试集文件路径
     """
-    from evaluator import load_testset
     import json
 
     script_dir = os.path.dirname(os.path.abspath(__file__))

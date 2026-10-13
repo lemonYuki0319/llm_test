@@ -17,7 +17,6 @@ from config import (
     DEFAULT_NEGATIVE_COUNT,
     DEFAULT_MULTI_HOP_COUNT,
     get_testcases_dir,
-    get_testdate_dir,
 )
 from document_processor import load_knowledge_base, split_document, save_chunks
 

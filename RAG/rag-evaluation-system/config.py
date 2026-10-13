@@ -48,8 +48,6 @@ DEFAULT_MULTI_HOP_COUNT = int(os.getenv("MULTI_HOP_COUNT", "3"))
 # =============================================================================
 # 评分阈值
 FAITHFULNESS_THRESHOLD = float(os.getenv("FAITHFULNESS_THRESHOLD", "0.8"))
-RELEVANCY_THRESHOLD = float(os.getenv("RELEVANCY_THRESHOLD", "0.7"))
-CONTEXT_RECALL_THRESHOLD = float(os.getenv("CONTEXT_RECALL_THRESHOLD", "0.7"))
 
 # RAGAS 运行配置
 EVAL_TIMEOUT = int(os.getenv("EVAL_TIMEOUT", "180"))

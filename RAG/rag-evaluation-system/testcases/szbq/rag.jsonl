@@ -1,0 +1,15 @@
+# 忠诚度、上下文相关性
+{"input": "数字版权业务客服电话是多少","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "数字版权发行方认证的流程是怎么样的","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "讲解数字版权商品、数字版权、数字版权兑换商品和华夏豆之间区别","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "我应该如何获得数字版权，并在市场上进行交易","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "数字版权不能做哪些操作","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "我应该如何获得数字版权","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "数字版权命名的唯一校验有哪些","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "能获取到分红的方式有哪些","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "数字版权转增之后还能收回来吗","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+# 上下文召回率
+{"input": "数字版权转增之后还能收回来吗","expected_output":"不可以，转增不可撤销，请确认收赠人身份准确","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "市场有一个数字版权挂单为50块，我挂单同样的数字版权价格为500","expected_output":"挂单价偏离估值 ±50% 时会被系统风控提示，建议参考最近成交价合理定价。","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "数字版权不能做哪些操作","expected_output":"数字版权不能用于购买数字版权商品，进行兑换商品时只能用该兑换商品规定的数字版权兑换","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
+{"input": "数字版权命名的唯一校验有哪些","expected_output":"数字版权命名的唯一校验包括：1. 数字版权命名不能重复；2. 命名不能超过20个字符。","actual_output":"为实际模型输出","retrieval_context":"为实际检索内容"}
